@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#EDEDED"
+    >
+
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar_main"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="#2196F3"
+    app:titleTextColor="@color/white"
+
+    ></androidx.appcompat.widget.Toolbar>
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rv_messages"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/toolbar_main"
+    android:layout_above="@id/et_typeMessage"
+
+    android:visibility="gone"
+
+    ></androidx.recyclerview.widget.RecyclerView>
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_typeMessage"
+            android:layout_width="330dp"
+            android:layout_height="40dp"
+            android:layout_above="@id/ll_terminal"
+            android:background="@drawable/message_input"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            ></androidx.appcompat.widget.AppCompatEditText>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_sendMessage"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_above="@id/ll_terminal"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="5dp"
+        android:backgroundTint="#2196F3"
+        android:src="@drawable/ic_baseline_send_24"
+        android:scaleType="center"
+        android:visibility="gone"
+        >
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_color"
+        android:text="Connect"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:padding="30dp"
+        android:layout_centerInParent="true"
+
+        ></androidx.appcompat.widget.AppCompatButton>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_terminal"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true"
+        android:background="#C1C1C1"
+android:paddingVertical="20dp"
+        >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="#E3DEB3"
+        android:elevation="@dimen/cardview_compat_inset_shadow"
+
+        >
+
+        <TextView
+            android:id="@+id/tv_terminal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/cutive_mono"
+            android:textColor="@color/black"
+            android:text="Tap to connect"
+            android:textSize="20dp"></TextView>
+
+    </ScrollView>
+
+
+
+    </LinearLayout>
+</RelativeLayout>

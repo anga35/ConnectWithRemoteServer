@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/ll_messageBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    >
+
+<TextView
+    android:id="@+id/tv_itemMessage"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Hiii"
+    android:textColor="@color/white"
+    android:textSize="20dp"
+    android:padding="10dp"
+    android:background="@drawable/button_color"
+    android:layout_margin="10dp"
+    android:layout_alignParentRight="true"
+
+    ></TextView>
+
+</RelativeLayout>
